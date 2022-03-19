@@ -7,7 +7,7 @@ portion of the data to you in an S3 bucket to use in the Proof-of-Concept (POC).
 
 To clone this repo, run 
 
-`git@github.com:Vella020/SENG-5709-Project2-Snowflake-POC.git`
+`git clone git@github.com:Vella020/SENG-5709-Project2-Snowflake-POC.git`
 
 - **Team name/ Slack channel Name** : **infinite-loop**
 
