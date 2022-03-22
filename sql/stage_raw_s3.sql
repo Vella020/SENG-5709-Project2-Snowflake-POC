@@ -19,3 +19,4 @@ file_format = (type = 'CSV' field_delimiter = '|' skip_header = 1);
 
 CREATE or replace stage s3_sales_stage url='s3://seng5709/sales/'
 file_format = (type = 'CSV' field_delimiter = '|' skip_header = 1);
+

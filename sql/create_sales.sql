@@ -7,5 +7,11 @@ Use database identifier($database_name)
 use schema identifier($schema_name)
 
 -- create table
-CREATE TABEL IF NOT EXISTS demo.sales ()
-   id int)
+CREATE TABLE IF NOT EXISTS DEMO.sales ()
+   Orderid int,
+   SalesPersoniD int,
+   CustomeriD int,
+   ProductiD int,
+   Quantity int,
+   Date timestamp)
+   COMMENT = 'sales table'

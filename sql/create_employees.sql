@@ -7,5 +7,10 @@ Use database identifier($database_name)
 use schema identifier($schema_name)
 
 -- create table
-CREATE TABEL IF NOT EXISTS demo.employees ()
-   id int)
+CREATE TABLE IF NOT EXISTS demo.employees (
+   EmployeeiD int,
+   FirstName varchar,
+   MiddleInitial varchar,
+   LastName varchar,
+   Region varchar)
+   COMMENT = 'employees table';
