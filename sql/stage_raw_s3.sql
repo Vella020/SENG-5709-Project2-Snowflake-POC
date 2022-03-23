@@ -1,11 +1,12 @@
 
 -- set database and schema 
-SET database_name = 'USER_INFINITELOOP'
-SET schema_name = 'DEMO'
+Set databaseName = 'USER_INFINITELOOP';
+Set schema_name = 'DEMO';
 
 -- use database and schema
-Use database identifier($database_name)
-use schema identifier($schema_name)
+Use database identifier($databaseName);
+use schema identifier($schema_name);
+
 
 -- create stage on S3
 CREATE or replace stage s3_customers_stage url='s3://seng5709/customers/'

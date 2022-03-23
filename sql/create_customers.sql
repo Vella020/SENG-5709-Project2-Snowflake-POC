@@ -1,13 +1,12 @@
 
--- set database and schema 
-SET database_name = 'USER_INFINITELOOP'
-SET schema_name = 'DEMO'
-
-CREATE SCHEMA if NOT EXISTS ($schema_name)
--- use database and schema
-Use database identifier($database_name)
-use schema identifier($schema_name)
-
+-- -- set database and schema 
+Set databaseName = 'USER_INFINITELOOP';
+Set schema_name = 'DEMO';
+-- CREATE SCHEMA if NOT EXISTS USER_INFINITELOOP.DEMO;
+ CREATE SCHEMA if NOT EXISTS identifier($schema_name);
+-- -- use database and schema
+Use database identifier($databaseName);
+Use schema identifier($schema_name);
 
 -- create table
 CREATE TABLE IF NOT EXISTS DEMO.customers (
