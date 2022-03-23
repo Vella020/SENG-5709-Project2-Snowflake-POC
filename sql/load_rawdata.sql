@@ -11,16 +11,16 @@ use schema identifier($schema_name);
 
 COPY into customers
 from @s3_customers_stage
-pattern = '*.csv '
+pattern = '.*customers.*.csv';
 
 COPY into employees
 from @s3_employees_stage
-pattern = '*.csv'
+pattern = '.*employees.*.csv';
 
 COPY into products
 from @s3_products_stage
-pattern = '*.csv'
+pattern = '.*products.*.csv';
 
 COPY into sales
 from @s3_sales_stage
-pattern = '*.csv'
+pattern = '.*sales.*.csv';
