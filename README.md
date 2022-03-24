@@ -25,21 +25,24 @@ git push
    - Suvarna Vellanki
 
 - **Snowflaks setup**
-- Download snowsql
-- Set below config parameters in config file by (open ~/.snowsql/config) command
-- `https://docs.snowflake.com/en/user-guide/snowsql-start.html#using-named-connections`
-  `     - [connections.<connectionName>
-        -  accountname = <accountName> 
-        -  username = <userName> 
-         - password = <password>`
-- set security key from AWS as per the below link to suessfully download data from S3
-- Now run below commands in squence to run load data from s3 to tables
+- Step 1 Download snowsql
+- Step 2 Set below config parameters in config file by (open ~/.snowsql/config) command
+
+      ` - [connections.<connectionName>`
+      `  -  accountname = <accountName> `
+      `  -  username = <userName> `
+      `  - password = <password>`
+
+- Step 3 set security key from AWS as per the below link to suessfully download data from S3
+-  `https://docs.snowflake.com/en/user-guide/snowsql-start.html#using-named-connections`
+
+- Step 4 Now run below commands in squence to run load data from s3 to tables
   - create empty Tables
- ` - snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_customers.sql";
-  - snowsql -c /<connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_employees.sql";
-  - snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_products.sql";
-  - snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_sales.sql";`
-  -   Load data from S3 to stage 
+  ` - snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_customers.sql";`
+  `- snowsql -c /<connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_employees.sql";`
+  `- snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_products.sql";`
+  ` - snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/create_sales.sql";`
+  - Load data from S3 to stage `
   `snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/stage_raw_s3.sql";`
   -   Load data from stage to tables created above 
   `snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/load_rawdata.sql";`
@@ -47,10 +50,10 @@ git push
 
 
 
-- Now check the table values cli using below commands
+- Step 5 Now check the table values cli using below commands
 - by logging on to `https://<accounName>.snowflakecomputing.com/console#/internal/worksheet`
-` - DESCRIBE TABLE  employees;
- -  select * from  employees;
- - select * from  products;
- - select * from  sales;
- - select * from customers; `
+` - DESCRIBE TABLE  employees;`
+` -  select * from  employees;`
+` - select * from  products;`
+` - select * from  sales;`
+ `- select * from customers; `
