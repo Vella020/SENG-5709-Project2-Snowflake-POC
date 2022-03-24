@@ -52,8 +52,8 @@ git push
 
 - Step 5 Now check the table values cli using below commands
 - by logging on to `https://<accounName>.snowflakecomputing.com/console#/internal/worksheet`
-` - DESCRIBE TABLE  employees;`
-` -  select * from  employees;`
-` - select * from  products;`
-` - select * from  sales;`
- `- select * from customers; `
+- ` - DESCRIBE TABLE  employees;`
+- ` -  select * from  employees;`
+- ` - select * from  products;`
+- ` - select * from  sales;`
+ - `- select * from customers; `
