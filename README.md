@@ -25,7 +25,7 @@ git push
    - Suvarna Vellanki
 
 - **Snowflaks setup**
-- Step 1 Download snowsql
+- Step 1 signup for snowsql `https://signup.snowflake.com/`
 - Step 2 Set below config parameters in config file by (open ~/.snowsql/config) command
 
       ` - [connections.<connectionName>`
