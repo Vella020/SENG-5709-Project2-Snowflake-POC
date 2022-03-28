@@ -16,7 +16,8 @@ use schema identifier($schema_name);
 CREATE or replace file format mycsvformat
   type = 'CSV'
   field_delimiter = '|'
-  skip_header = 1;
+  skip_header = 1
+  error_on_column_count_mismatch = false;
 
 -- create stage on S3
 CREATE or replace stage s3_customers_stage
