@@ -1,5 +1,5 @@
-Set databaseName = 'USER_INFINITELOOP';
-Set schema_name = 'DEMO';
+Set databaseName = 'infiniteloop_sales';
+Set schema_name = 'raw';
 
 Use database identifier($databaseName);
 Use schema identifier($schema_name);
