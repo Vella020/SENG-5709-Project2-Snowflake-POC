@@ -1,15 +1,7 @@
-
--- set database and schema 
 Set databaseName = 'infiniteloop_sales';
 Set schema_name = 'raw';
-
-CREATE DATABASE if NOT EXISTS identifier($databaseName);
-CREATE SCHEMA if NOT EXISTS identifier($schema_name);
-
--- use database and schema
 Use database identifier($databaseName);
 use schema identifier($schema_name);
-
 
 -- create file format
 
