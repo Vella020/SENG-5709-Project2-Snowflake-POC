@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS raw.customers (
    COMMENT = 'customers table';
 
 CREATE TABLE IF NOT EXISTS raw.employees (
-   EMPLOYEEID int,
+   EmployeeID int,
    FirstName varchar,
    MiddleInitial varchar,
    LastName varchar,
