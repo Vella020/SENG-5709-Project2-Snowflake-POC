@@ -52,6 +52,4 @@ Set security key from AWS as per the below link to suessfully download data from
 
 #### Load data from stage to tables created above: 
 `$ snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/load_rawdata.sql";`
-  
-#### Validate that tables and data exist:
-`$ snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/check_tables.sql";`
+
