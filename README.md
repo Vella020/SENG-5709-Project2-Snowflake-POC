@@ -36,7 +36,7 @@ schemaname = <schema>
 warehousename = <compute_wh>
 ```
 
-Set security key from AWS as per the below link to suessfully download data from S3
+Set security key from AWS as per the below link to successfully download data from S3
  `https://docs.snowflake.com/en/user-guide/snowsql-start.html#using-named-connections`
 
 ### Load data from s3 to tables
@@ -58,14 +58,33 @@ This script automatically downloads files from S3 and uploads them to Snowflake.
 
 ## User Documentation
 
-TODO: put info about the data/tables
+Database Name = `infiniteloop_sales` 
 
+Schema Name = `raw`
+
+### Data Models / Table Schema
 - Customers
+	- CustomerID `int`
+	- FirstName `varchar`
+	- MiddleInitial `varchar`
+	- LastName `varchar`
 - Employees
+	- EmployeeID `int`
+	- FirstName `varchar`
+	- MiddleInitial `varchar`
+	- LastName `varchar`
+	- Region `varchar`
 - Products
+	- ProductID `int`
+	- Name `varchar`
+	- Price `decimal`
 - Sales
-
-TODO: Table Schemas?
+	-  OrderID `int`
+	-  SalesPersonID `int`
+	-  CustomerID `int`
+	-  ProductID `int`
+	-  Quantity `int`
+	-  Date `timestamp`
 
 ### Quality Analysis
 
