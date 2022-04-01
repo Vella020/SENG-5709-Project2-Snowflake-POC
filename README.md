@@ -33,8 +33,10 @@ git clone https://github.com/Vella020/SENG-5709-Project2-Snowflake-POC.git
 ## Deployment Run Book
 
 ### **Snowflake Setup**
-Step 1 Signup for snowsql `https://signup.snowflake.com/`
-Step 2 Add connection parameters in `~/.snowsql/config`
+
+**Step 1:** Signup for snowsql `https://signup.snowflake.com/`
+
+**Step 2:** Add connection parameters in `~/.snowsql/config`
 
 ```
 [connections.infiniteloop]
