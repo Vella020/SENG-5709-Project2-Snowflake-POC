@@ -20,6 +20,16 @@ git clone https://github.com/Vella020/SENG-5709-Project2-Snowflake-POC.git
    - Ryan Kleeberger
    - Suvarna Vellanki
 
+   
+### Table of Contents
+1. [Deployment Run Book] (#deployment-run-book)
+	- [Snowflake Setup] (#snowflake-setup)
+	- [Load data from S3 to tables] (#load-data-from-s3-to-tables)
+2. [User Documentation] (#user-documentation)
+	- [Data Models / Table Schema](#data-models-/-table-schema)
+	- [Quality Analysis] (#quality-analysis) 
+3. [Materialized View Use Cases] (#materialized-view-use-cases)
+
 ## Deployment Run Book
 
 ### **Snowflake Setup**
@@ -39,7 +49,7 @@ warehousename = <compute_wh>
 Set security key from AWS as per the below link to successfully download data from S3
  `https://docs.snowflake.com/en/user-guide/snowsql-start.html#using-named-connections`
 
-### Load data from s3 to tables
+### Load data from S3 to tables
 
 #### Create empty tables:
 See User Documentation section for info about the tables:
