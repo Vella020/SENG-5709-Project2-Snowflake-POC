@@ -63,10 +63,6 @@ This script automatically downloads files from S3 and uploads them to Snowflake.
 
 #### Load data from stage to tables created above: 
 `$ snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/load_rawdata.sql";`
-  
-#### Validate that tables and data exist:
-`$ snowsql -c <connectionName> -f "<Local folder path>/SENG-5709-Project2-Snowflake-POC/sql/check_tables.sql";`
-
 
 ## User Documentation
 
