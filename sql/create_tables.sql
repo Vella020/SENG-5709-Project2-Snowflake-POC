@@ -7,31 +7,27 @@ Use database identifier($databaseName);
 Use schema identifier($schema_name);
 
 CREATE TABLE IF NOT EXISTS raw.customers (
-   CustomerID int,
-   FirstName varchar,
+   CustomerID int NOT NULL UNIQUE,
+   FirstName varchar NOT NULL,
    MiddleInitial varchar,
-   LastName varchar)
-   COMMENT = 'customers table';
+   LastName varchar NOT NULL);
 
 CREATE TABLE IF NOT EXISTS raw.employees (
-   EmployeeID int,
-   FirstName varchar,
+   EmployeeID int NOT NULL UNIQUE,
+   FirstName varchar NOT NULL,
    MiddleInitial varchar,
-   LastName varchar,
-   Region varchar)
-   COMMENT = 'employees table';
+   LastName varchar NOT NULL,
+   Region varchar NOT NULL);
 
 CREATE TABLE IF NOT EXISTS raw.products (
-   ProductiD int,
-   Name varchar,
-   Price decimal)
-   COMMENT = 'products table';
+   ProductiD int NOT NULL UNIQUE,
+   Name varchar NOT NULL,
+   Price decimal NOT NULL);
 
 CREATE TABLE IF NOT EXISTS raw.sales (
-   Orderid int,
-   SalesPersoniD int,
-   CustomeriD int,
-   ProductiD int,
-   Quantity int,
-   Date timestamp)
-   COMMENT = 'sales table';
+   Orderid int NOT NULL UNIQUE,
+   SalesPersoniD int NOT NULL,
+   CustomeriD int NOT NULL,
+   ProductiD int NOT NULL,
+   Quantity int NOT NULL,
+   Date timestamp);
