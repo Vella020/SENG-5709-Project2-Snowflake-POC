@@ -1,5 +1,6 @@
 Set databaseName = 'infiniteloop_sales';
 Set schema_name = 'raw';
+
 CREATE DATABASE if NOT EXISTS identifier($databaseName);
 CREATE SCHEMA if NOT EXISTS identifier($schema_name);
 
