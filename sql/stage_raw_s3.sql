@@ -1,5 +1,6 @@
 Set databaseName = 'infiniteloop_sales';
 Set schema_name = 'raw';
+
 Use database identifier($databaseName);
 use schema identifier($schema_name);
 
