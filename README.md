@@ -96,7 +96,31 @@ Schema Name = `raw`
 
 ### Quality Analysis
 
-TODO: 
+The following contrainsts have been added. However, excepting `NOT NULL`, Snowflake does not enforce any constraint, these cso bearing that exception in mind, these onstraints are informational only.
+
+| table     | column       | constraints       |
+|-----------|--------------|-------------------|
+| customers | CustomerID   | not null, unique  |
+|           | FirstName    | not null          |
+|           | MiddleInitial| (no constraints)  |
+|           | LastName     | not null          |
+| employees | EmployeeID   | not null, unique  |
+|           | FirstName    | not null          |
+|           | MiddleInitial| (no constraints)  |
+|           | LastName     | not null          |
+| products  | ProductiD    | not null, unique  |
+|           | Name         | not null          |
+|           | Price        | not null          |
+| sales     | Orderid      | not null, unique  |
+|           | SalesPersoniD| not null          |
+|           | CustomeriD   | not null          |
+|           | ProductiD    | not null          |
+|           | Quantity     | not null          |
+|           | Region       | not null          |
+|           | Date         | not null          |
+|-----------|--------------|-------------------|
+
+To compensate for the lack of constraint enforcement, `validate_and_clean_data.sql` removes any duplicate rows.
 
 ## Materialized View Use Cases
 
@@ -106,16 +130,3 @@ Report(s) could be updated automatically by Snowflake as new data is ingested pe
 ### 2. Determining how Price affects Sales & Price Trends
 
 During holidays and sale seasons, many products tend to have lowered prices. One could compare prices during non-holidays vs holidays and learn how it affects sales numbers. Materialized views of table joins such as `products` and `sales` could come in handy in this case. The materialized view results could also filter non-holiday prices and sales.
-
-
-
-
-
-
-
-
-
-
-
-
-
