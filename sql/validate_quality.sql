@@ -68,17 +68,17 @@ drop table employees_non_duplicates;
 
 -- Show any duplicates on the sales table
 select orderID,
-    SalesPersoniD,
-    CustomeriD,
-    ProductiD,
+    SalesPersonID,
+    CustomerID,
+    ProductID,
     Quantity,
     Date,
     COUNT(*)
 from sales
 group by orderID,
-    SalesPersoniD,
-    CustomeriD,
-    ProductiD,
+    SalesPersonID,
+    CustomerID,
+    ProductID,
     Quantity,
     Date
 having COUNT(*) > 1;
@@ -88,9 +88,9 @@ create or replace table sales_non_duplicates as
 select st.*
 from sales st qualify row_number() over (
         partition by orderID,
-    SalesPersoniD,
-    CustomeriD,
-    ProductiD,
+    SalesPersonID,
+    CustomerID,
+    ProductID,
     Quantity,
     Date
         order by orderid
