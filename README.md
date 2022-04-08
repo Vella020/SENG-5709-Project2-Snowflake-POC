@@ -9,6 +9,7 @@ To clone this repo, please run:
 ```
 git clone https://github.com/Vella020/SENG-5709-Project2-Snowflake-POC.git
 ```
+Please follow instructions in the [Deployment Run Book](#deployment-run-book) section to setup Snowflake and use the scripts in this repo.
 
 #### Slack Channel: `#infinite-loop`
 
@@ -22,13 +23,14 @@ git clone https://github.com/Vella020/SENG-5709-Project2-Snowflake-POC.git
 
 ### Table of Contents
 
-1. [Deployment Run Book] (#deployment-run-book)
-   - [Snowflake Setup] (#snowflake-setup)
-   - [Load data from S3 to tables] (#load-data-from-s3-to-tables)
-2. [User Documentation] (#user-documentation)
+1. [Deployment Run Book](#deployment-run-book)
+   - [Snowflake Setup](#snowflake-setup)
+   - [Load data from S3 to tables](#load-data-from-s3-to-tables)
+2. [User Documentation](#user-documentation)
    - [Data Models / Table Schema](#data-models-/-table-schema)
-   - [Quality Analysis] (#quality-analysis)
-3. [Materialized View Use Cases] (#materialized-view-use-cases)
+   - [Quality Analysis](#quality-analysis)
+3. [Materialized View Use Cases](#materialized-view-use-cases)
+4. [How to Run](#how-to-run)
 
 ## Deployment Run Book
 
@@ -145,7 +147,7 @@ prices during non-holidays vs holidays and learn how it affects sales numbers. M
 table joins such as `products` and `sales` could come in handy in this case. The materialized view
 results could also filter non-holiday prices and sales.
 
-### HOW TO RUN
+## HOW TO RUN
 
 | S.No | Name of file                           | Path in repository                                                          | Short description              |
 | ---- | -------------------------------------- | --------------------------------------------------------------------------- | ------------------------------ |
