@@ -9,7 +9,7 @@ create view curated.customerID_monthly_sales_2019_view AS
 select CustomerID AS CustomerID,
     to_char(Date, 'yyyy') AS Year,
     to_char(Date, 'mm') AS Month,
-    SUM (Price) AS TotalAmount
+    SUM (sa.Quantity * pr.price) AS TotalAmount
 from raw.sales sa,
     raw.products pr
 where sa.ProductID = pr.ProductID
