@@ -1,3 +1,4 @@
 USE DATABASE infiniteloop_sales;
 DROP SCHEMA IF EXISTS raw CASCADE;
+DROP SCHEMA IF EXISTS curated;
 DROP DATABASE IF EXISTS infiniteloop_sales CASCADE;
