@@ -19,7 +19,3 @@ select sa.OrderID,
 from raw.sales sa,
     raw.products pr
 where sa.ProductID = pr.ProductID;
-
-/*Fetch the Data*/
-select *
-from curated.product_sales_view;

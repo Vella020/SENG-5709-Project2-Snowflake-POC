@@ -21,6 +21,3 @@ FirstName as "CustomerFirstName",
 TotalLifetimePurchasedAmount
 from raw.customers cu, curated.top_ten_customerID_amount_view vi
 where cu.CustomerID = vi.CustomerID;
-
-/*Fetch the Data*/
-select * from curated.top_ten_customers_amount_view;

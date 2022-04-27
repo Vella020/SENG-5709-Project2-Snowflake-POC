@@ -1,8 +1,8 @@
 Set databaseName = 'infiniteloop_sales';
 Set schema_name = 'curated';
-CREATE SCHEMA if NOT EXISTS identifier($schema_name);
 Use database identifier($databaseName);
 Use schema identifier($schema_name);
+CREATE SCHEMA if NOT EXISTS identifier($schema_name);
 
 /* Create temporary view to fetch Customer Id and aggregate total amount of all products purchased by month for 2019*/
 create view curated.customerID_monthly_sales_2019_view AS
@@ -29,7 +29,3 @@ select cu.CustomerID,
 from raw.customers cu,
     curated.customerID_monthly_sales_2019_view vi
 where cu.CustomerID = vi.CustomerID;
-
-/*Fetch the Data*/
-select *
-from curated.customer_monthly_sales_2019_view;
